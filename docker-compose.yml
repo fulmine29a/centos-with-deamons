@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  
+  cent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    cap_add:
+      - SYS_ADMIN
+    tmpfs:
+      - /run
+      - /tmp
+    tty: true
+    stdin_open: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /home/fulmine/phpstormProjects/me/centos-docker/www:/home/bitrix/
