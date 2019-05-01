@@ -16,3 +16,4 @@ services:
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /home/fulmine/phpstormProjects/me/centos-docker/www:/home/bitrix/
+#      - ${HOME}/.ssh/id_rsa.pub:/root/.ssh/authorized_keys
